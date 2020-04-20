@@ -1,0 +1,1272 @@
+/**********************************************/
+/*  AiR RUI common Starfort         	      */
+/*  2017/10/11   Dev                          */
+/**********************************************/
+/*-- basic elements ------------------------------*/
+* {
+margin: 0;
+padding: 0;
+font-size: small;
+font-weight: normal;
+line-height: auto;
+}
+body {color: #000;background-color: #FEFEFE;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+a:link,
+a:visited {color: #FFF;text-decoration: none;}
+a:hover  {color: #EFEFEF;text-decoration: none;}
+a:active {color: #EFEFEF;text-decoration: none;}
+
+hr {display: none;}
+legend {display: none;}
+fieldset {border: none;}
+img {vertical-align: middle;border: none;}
+select {
+vertical-align: middle;
+margin: 3px 0;
+padding: 0;
+font-weight: normal;
+line-height: auto;
+font-size: 1em;
+min-width: 60px;
+/ min-width: auto;
+}
+select option {padding: 0 1ex;font-size: 1em;}
+input {
+vertical-align: middle;
+padding: 1px 6px 1px 2px;
+font-weight: normal;
+font-size: 1em;
+}
+textarea {vertical-align: middle;padding: 2px;}
+
+/*-- common style --*/
+.Supplement {display: none;}
+.Wrapper {background: transparent;zoom: 1;}
+.Wrapper:after {content: "";display: block;clear: both;}/* clearfix */
+
+.TextReadOnly {color: #000;background: #E7E7E7;}
+
+/*--.Buttons--*/
+.TransitionOperation input.ButtonEnable,
+.TransitionOperation input.ButtonDisable,
+.ConfirmOperation input.ButtonEnable,
+.ConfirmOperation input.ButtonDisable,
+.ContentOperation input.ButtonEnable,
+.ContentOperation input.ButtonDisable{
+min-width: 7em;
+/ min-width: auto;
+}
+input.ButtonEnable {
+font-weight: normal;
+width: auto;
+padding: 4px 8px;
+margin: 2px 0;
+border: 1px solid #CCC;
+background: #EEE;
+line-height:  auto;
+}
+input.ButtonEnable:hover
+{background: #F8F4C9;
+}
+input.ButtonEnable:active
+{background: #EFE695;
+}
+input.ButtonDisable {
+font-weight: normal;
+width: auto;
+padding: 4px 8px;
+margin: 2px 0;
+border: 1px solid #d2d2d2;
+background: #eeeeee;
+color: #c7c7c7;
+line-height: auto;
+}
+
+.ItemListComponent input.ButtonEnable,
+.ItemListComponent input.ButtonDisable {
+min-width: 4em;
+/ min-width: auto;
+}
+input.ButtonEnable:disabled {
+border: 1px solid #d2d2d2;
+background: #eeeeee;
+color: #c7c7c7;
+}
+a.Button {
+display: block;
+float: left;
+padding: 3px 5px;
+margin: 2px 4px 2px 0;
+line-height: 1.2em !important;
+white-space: nowrap;
+text-decoration: none !important;
+border: 1px solid #cccccc;
+background: #eeeeee;
+}
+
+a.ButtonDisable{
+display: block;
+float: left;
+padding: 3px 5px;
+margin: 2px 4px 2px 0;
+line-height: 1.2em !important;
+white-space: nowrap;
+text-decoration: none !important;
+border: 1px solid #d2d2d2;
+background: #eeeeee;
+color: #c7c7c7;
+cursor: default;
+}
+
+a.Button:link ,
+a.Button:visited {
+border: 1px solid #cccccc;
+background: #eeeeee;
+text-decoration: none;
+}
+a.Button:hover {
+border: 1px solid #cccccc;
+background: #F8F4C9;
+text-decoration: none;
+}
+a.Button:active ,
+a.Button:focus {
+border: 1px solid #cccccc;
+background: #EFE695;
+text-decoration: none;
+}
+button.ButtonEnable {
+width: auto;
+padding: 2px 4px;
+margin: 2px 0;
+border: 1px solid #cccccc;
+background: #eeeeee;
+color: #232323;
+}
+button.ButtonDisable {
+width: auto;
+padding: 2px 4px;
+margin: 2px 0;
+border: 1px solid #d2d2d2;
+background: #eeeeee;
+color: #c7c7c7;
+}
+button img {
+margin: 0;
+vertical-align: middle;
+border: none;
+}
+button span {
+vertical-align: middle;
+line-height: 17px;
+}
+
+/*-- basic layout ------------------------------*/
+/*--#container--*/
+#container {
+margin: 0 auto;
+width: 100%;
+min-width: 760px;
+text-align: left;
+}
+/*--#ruiCommons--*/
+#ruiCommons {
+clear: both;
+color: #FFF;
+background: #0F0F0F;
+padding: 4px 0;
+zoom: 1;
+}
+#ruiCommons:after {content: "";display: block;clear: both;}/* clearfix */
+
+/*-- #applications --*/
+#applications {position: relative;zoom: 1;}
+#applications:after {content: "";display: block;clear: both;}/* clearfix */
+
+/*-- field style ------------------------------*/
+
+/*--#commonBranding--*/
+#commonBranding {float: left;padding: 0 11px;}
+#commonBranding a:link ,
+#commonBranding a:visited ,
+#commonBranding a:hover ,
+#commonBranding a:active ,
+#commonBranding a:focus {text-decoration: none;}
+#commonBranding #deviceLogo {display: inline;}
+#commonBranding #deviceLogo img ,
+#commonBranding #deviceLogo > img {display: none;}
+#commonBranding #deviceLogo span{font-weight: bold;}
+
+#commonBranding #deviceLogo a:link ,
+#commonBranding #deviceLogo a:visited {color: #D2D2D2;text-decoration: none;}
+#commonBranding #deviceLogo a:hover {color: #FFF;text-decoration: none;}
+#commonBranding #deviceLogo a:active,
+#commonBranding #deviceLogo a:focus {color: #ADADAD;text-decoration: none;}
+
+#commonBranding #deviceType {
+margin: 0 0 0 50px ;
+display: inline;
+padding: 0 6px;
+color: #DFDFDF;
+}
+#commonBranding #deviceType span{font-weight: bold;}
+
+/*--#commonTools--*/
+#commonTools {
+float: right;
+text-align: right;
+margin-right: 6px;
+}
+#commonTools * {
+font-weight: bold;
+line-height: 1.2em;
+}
+#commonTools fieldset {
+float: left;
+margin: 0 6px 0 6px;
+color: #D2D2D2;
+white-space: nowrap;
+}
+#commonTools p {display: inline;}
+#loginUserData .Supplement {
+display: inline;
+margin: 0 2px 0 12px;
+}
+#userName {margin: 0 6px 0 6px;}
+#commonTools p span ,
+#commonTools p a {
+white-space: nowrap;
+z-index: 2;
+}
+#commonTools a:link ,
+#commonTools a:visited {
+color: #D2D2D2;
+border-bottom: 1px dotted #D2D2D2;
+text-decoration: none;
+}
+#commonTools a:hover {
+color:#FFF;
+border-bottom: 1px dotted #FFF;
+text-decoration: none;
+}
+#commonTools a:active ,
+#commonTools a:focus {
+color:#ADADAD;
+border-bottom: 1px solid #ADADAD;
+text-decoration: none;
+}
+/*-- #applicationBranding --*/
+#applicationBranding {
+background: #232323;
+color:#FFF;
+clear:both;
+zoom: 1;
+}
+#applicationBranding:after {content: "";display: block;clear: both;}/* clearfix */
+#applicationLogo {
+display: block;
+float: left;
+width: auto;
+height: 32px;
+line-height: 32px;
+padding: 2px 0 4px 10px;
+}
+#applicationLogo img {
+display: inline;
+margin-right: 8px;
+vertical-align: -10px;
+}
+#applicationLogo .BrandingName {
+display: inline;
+line-height: 100%;
+font-size: 120%;
+font-weight: bold;
+}
+#appTools {
+float: right;
+display: block;
+white-space: nowrap;
+text-align: right;
+line-height: 32px;
+padding: 0 8px;
+}
+#appTools fieldset{
+display: inline;
+margin: 0 5px;
+vertical-align: middle;
+line-height: 32px;
+}
+#appTools span {line-height: 32px;}
+#appTools a {
+margin: 0 5px 0 2px;
+line-height: 14px;
+}
+#appTools a:link ,
+#appTools a:visited {
+color: #D2D2D2;
+text-decoration: none;
+border-bottom: 1px dotted #D2D2D2;
+}
+#appTools a:hover {
+color: #FFF;
+text-decoration: none;
+border-bottom: 1px dotted #FFF;
+}
+#appTools a:active ,
+#appTools a:focus {
+color: #ADADAD;
+text-decoration: none;
+border-bottom: 1px solid #ADADAD;
+}
+#appTools select {
+line-height: 14px;
+margin: 6px 0;
+}
+#appTools a.ImgButton {
+margin: 0;
+line-height: 14px;
+border: none !important;
+}
+
+/*-- #applicationContents --*/
+#applicationContents {
+position: relative;
+background: #FFF url("/userauth/DMSImage/media/contents_bg_l.png") left top repeat-y;
+zoom: 1;
+}
+#applicationContents:after ,
+#applicationContents .Wrapper:after {content: "";display: block;clear: both;}/* clearfix */
+#applicationContents .Wrapper {display: inline-block;width: 100%;}
+
+#contentsWrapper {
+width: 100%;
+padding: 0;
+float: right;
+margin: 0 0 0 -250px;
+zoom: 1;
+}
+#contents {
+margin: 0 0 0 250px;
+padding: 10px 28px 10px 28px;
+}
+#navigationWrapper {
+position: static;
+top: auto;
+left: auto;
+float: right;
+width: 250px;
+padding: 0;
+zoom: 1;
+}
+
+/*--#navigation --*/
+#navigation {width: 249px;margin-left: 1px;}
+#navigation h2 {display: none;}
+#navigation h3 {display: none;}
+#navigation ul { line-height: 20px;}
+#navigation ul li {
+list-style: none;
+display: block;
+margin:0;
+}
+#navigation ul li span.GroupTitle {
+display: block;
+margin: 0;
+padding: 2px 11px 0 11px;
+font-size: 90%;
+font-weight: bold;
+border-bottom: 1px solid #DEDEDE;
+}
+#navigation ul li a {
+display: block;
+padding: 8px 1.5em;
+margin: 0;
+}
+#navigation ul li a:link ,
+#navigation ul li a:visited { 
+color: #232323;
+border-right: 1px solid #DEDEDE;
+}
+#navigation ul li a:hover,
+#navigation ul li a:focus {
+color: #232323;
+background:#F8F4C9;
+border-right: 1px solid #DEDEDE;
+}
+#navigation ul li a:active {
+color: #232323;
+background: #EFE695;
+border-right: 1px solid #DEDEDE;
+}
+#navigation ul li.Selected a {
+background:#FFF;
+color: #232323;
+border-right: 1px solid #DEDEDE;
+}
+#navigation ul li.Selected a:link ,
+#navigation ul li.Selected a:visited {
+background:#FFF;
+color: #232323;
+border-right: 1px solid #DEDEDE;
+}
+#navigation ul.SubSub {
+margin-left: 1em;
+}
+.MainItem .Sub{border-bottom: 1px solid #CCC;}
+
+/*-- #applicationInfo --*/
+#applicationInfo {
+clear: both;
+text-align: right;
+padding: 6px 0 6px 0;
+width: 100%;
+height: 1.4em;
+background:#0F0F0F;
+color: #FFF;
+position:relative;
+}
+span.TechInfo {float: left;}
+#changeView {
+padding: 2px 12px;
+font-size: 90%;
+float: left;
+line-height: 1em;
+font-style: normal;
+}
+#changeView a:link ,
+#changeView a:visited {
+color: #D2D2D2;
+border-bottom: 1px dotted #D2D2D2;
+text-decoration: none;
+}
+#changeView a:hover {
+color: #FFF;
+border-bottom: 1px dotted #FFF;
+text-decoration: none;
+}
+#changeView a:active,
+#changeViewo a:focus {
+color: #ADADAD;
+border-bottom: 1px solid #ADADAD;
+text-decoration: none;
+}
+address.SiteInforLegal {
+padding: 2px 12px;
+font-size: 90%;
+float: right;
+line-height: 1em;
+font-style: normal;
+}
+/*--.GotoTop--*/
+.GotoTop {
+margin: 1ex 0;
+padding: 2px 0;
+border-top: 1px solid #D6D6D6;
+}
+/*--navTopicPath--*/
+#navTopicPath {
+margin: 0 0 6px 0;
+padding: 1px 0 0 0;
+background: #FFF;
+font-size: small;
+color: #666;
+zoom: 1;
+}
+#navTopicPath:after {content: "";display: block;clear: both;}/* clearfix */
+#navTopicPath h4 {display: none;}
+
+#navTopicPath a {
+text-decoration: none;
+font-size: small;
+}
+#navTopicPath a:link ,
+#navTopicPath a:visited {
+color: #666;
+border-bottom: none;
+}
+#navTopicPath a:hover {
+color: #0041D7;
+padding-bottom: 1px;
+border-bottom: 1px dotted #0041D7;
+}
+#navTopicPath a:active,
+#navTopicPath a:focus {
+color: #002F8C;
+border-bottom: 1px solid #002F8C;
+}
+#navTopicPath span {
+text-decoration: none;
+font-size: small;
+color: #666;
+}
+/*--#contentHeading--*/
+#contentHeading {
+zoom: 1;
+clear: both;
+margin-bottom: 6px;
+border-bottom: 1px solid #CCC;
+}
+#contentHeading:after {content: "";display: block;clear: both;}/* clearfix */
+#contentHeading h2.PageName {
+font-size: 150%;
+font-weight: bold;
+float: left;
+padding: 2px 12px 0 0;
+}
+#contentHeading h2.PageName img {margin: 0 4px;}
+
+/*--#contentHeadingTools--*/
+#contentHeadingTools {
+float: right;
+width: auto;
+margin: auto;
+}
+#tmpReload {
+float: left;
+margin: -3px 0 0 6px;
+padding: 7px 0 4px 0;
+width: 24px;
+line-height: 24px;
+}
+#tmpUpdate {
+float: left;
+padding-top: 5px;
+font-size: 90%;
+white-space: nowrap;
+line-height:22px;
+}
+/*--#contentInformation--*/
+#contentInformation {
+margin: 0;
+display: block;
+padding: 6px 5px;
+max-width: 70%;
+/max-width: 100%;
+line-height: 1.3em;
+float:left;
+/float: none;
+zoom: 1;
+}
+#contentInformation:after {content: "";display: block;clear: both;}/* clearfix */
+.ModuleHeading + #contentInformation {max-width: 100%;float: none;}
+#contentInformation ul{
+margin-top: 8px;
+margin-left: 1.5em;
+color: #333333;
+}
+#contentInformation li{line-height: 1.2em;}
+
+/*--.ContentOperation--*/
+.ContentOperation fieldset ,
+.ConfirmOperation fieldset {
+margin: 0;
+padding: 0;
+border-top: none;
+white-space: nowrap;
+text-align: right;
+}
+.ContentOperation legend ,
+.ConfirmOperation legend {display: none;}
+
+/*--#availableMemory--*/
+#availableMemory {
+display: block;
+text-align: right;
+margin: 8px 0;
+}
+#availableMemory span.Property {font-weight: bold;}
+#availableMemory span.Value {font-weight: bold;}
+#availableMemory img {margin: 0;}
+
+/*-- ContentModule --*/
+.ContentModule {margin-bottom: 12px;clear: both;}
+.ContentModule .ModuleHeading h4 {margin: 6px 0;}
+
+/*--.ModuleHeading--*/
+.ModuleHeading {display: block;zoom: 1;}
+.ModuleHeading:after {content: "";display: block;clear: both;}/* clearfix */
+.ModuleHeading h4 {
+font-size: 100%;
+font-weight: bold;
+color: #232323;
+background: #DEDEDE;
+padding: 4px 1px 4px 6px;
+clear: both;
+}
+.ModuleHeadingSub { 
+display: block;
+margin: 0 0 2px 0;
+padding: 2px 4px 2px 6px;
+border-bottom: 1px solid #DEDEDE;
+zoom: 1;
+}
+.ModuleHeadingSub:after {content: "";display: block;clear: both;}/* clearfix */
+.ModuleHeadingSub h4 {
+font-size: 100%;
+font-weight: bold;
+color: #232323;
+}
+/*--.ModuleElement--*/
+.ContentModule .ModuleElement {
+margin: 0 1em;
+zoom: 1;
+clear: both;
+}
+.ModuleElement:after {content: "";display: block;clear: both;}/* clearfix */
+.ModuleElement h5 {
+padding: 6px 0 0 0;
+font-size: 100%;
+color: #232323;
+border-bottom: 1px solid #999;
+font-weight: bold;
+height: auto;
+}
+.ModuleElement table {margin: 0;width: 100%;}
+.ModuleElement table thead tr {color: #000;}
+.ModuleElement table thead th {
+white-space: nowrap;
+padding: 3px 30px 3px 6px;
+text-align: left;
+white-space: nowrap;
+color: #232323;
+}
+.ModuleElement table tbody th {
+padding: 4px 6px;
+white-space: nowrap;
+text-align: left;
+color: #000;
+}
+.ModuleElement table tbody td {padding: 2px 7px;}
+.ModuleElement input {margin-right: 1px;}
+.ModuleElement table td input.Button {padding: 1px;}
+.ModuleElement a:link ,
+.ModuleElement a:visited {
+color: #002F8C;
+text-decoration: none;
+border-bottom: 1px dotted #002F8C;
+}
+.ModuleElement a:hover {
+color: #0041D7;
+text-decoration: none;
+border-bottom: 1px dotted #0041D7;
+}
+.ModuleElement a:active ,
+.ModuleElement a:focus {
+color: #002F8C;
+text-decoration: none;
+border-bottom: 1px solid #002F8C;
+}
+.ModuleElement a.Button ,
+.ModuleElement a.ButtonDisable {
+padding: 6px 10px;
+	 }
+
+.ModuleElement a.Button:link ,
+.ModuleElement a.Button:visited ,
+.ModuleElement a.Button:hover ,
+.ModuleElement a.Button:active ,
+.ModuleElement a.Button:focus {
+color: #000000;
+border: 1px solid #cccccc;
+}
+
+.ModuleElement a.ButtonDisable {
+border: 1px solid #d2d2d2;
+background: #eeeeee;
+color: #c7c7c7;
+}
+
+/*-- ContentModule .PropertyListComponent --*/
+.ContentModule .ModuleElement table.PropertyListComponent {
+width: 100%;
+border: none;
+line-height: 20px;
+padding:5px 1em;
+}
+.ContentModule .ModuleElement table.PropertyListComponent thead {
+display: none;
+border: none;
+}
+.ContentModule .ModuleElement table.PropertyListComponent tbody {border: none;}
+.ContentModule .ModuleElement table.PropertyListComponent th {
+width: 35%;
+text-align: left;
+vertical-align: top;
+color: #000;
+padding: 2px 1em;
+border-top: 0;
+border-bottom: 1px solid #FFF;
+border-left: 0;
+}
+.ContentModule .ModuleElement table.PropertyListComponent td {
+text-align: left;
+vertical-align: top;
+color: #000;
+padding: 2px 0;
+border-top: 0;
+border-bottom: 1px solid #FFF;
+border-right: 0;
+}
+/*-- ContentModule .ItemListComponent --*/
+.ContentModule .ModuleElement .ItemListComponent table {width: 100%;}
+.ContentModule .ModuleElement .ItemListComponent table thead th {
+padding: 3px 15px 3px 5px;
+text-align: left;
+white-space: nowrap;
+color: #000;
+background: #EEE;
+border-right: 1px solid #FFF;
+border-bottom:1px solid #FFF;
+}
+.ContentModule .ModuleElement .ItemListComponent table tbody th ,
+.ContentModule .ModuleElement .ItemListComponent table tbody td {
+line-height: 20px;
+text-align: left;
+color: #000;
+padding: 2px 7px;
+border-width: 0 0 1px 0;
+border-bottom: 1px dotted #DDD;
+}
+.ContentModule .ModuleElement .ItemListComponent table tbody td a {
+display: block;
+float: left;
+line-height: 28px;
+padding-right: 5px;
+}
+.CountLimit{color: #E00 !important;}
+
+/*-- ContentModule .ErrorListComponent --*/
+.ContentModule .ModuleElement table.ErrorListComponent thead {display: none;border: none;}
+.ContentModule .ModuleElement table.ErrorListComponent th ,
+.ContentModule .ModuleElement table.ErrorListComponent td {padding-top: 8px;}
+.ContentModule .ModuleElement table.ErrorListComponent th {width: 40px;}
+#noErrorInformation, 
+#errorInformation{margin: 12px 6px;}
+
+/*--table tr OddColumn / EvenColumn 
+tr.OddColumn th ,
+tr.OddColumn td {
+border-bottom:solid 1px #E8E8E8;
+}
+tr.EvenColumn th ,
+tr.EvenColumn td {
+background: #F5F6F8;
+border-bottom:solid 1px #E8E8E8;
+}
+tr.OddColumn td.NewInput {
+background-color: #EEE;
+border-right: 1px solid #FFF;
+}
+tr.EvenColumn td.NewInput {
+background-color: #E4E8EE;
+border-right: 1px solid #FFF;
+}
+--*/
+
+/* col */
+colgroup{border: 0;}
+col.SelectColumn{width: 2em;white-space: nowrap;}
+col.TypeColumn{width: auto;white-space: nowrap;}
+.NumberColumn {width:3em;}
+
+/* SortOperation */
+
+.ContentModule .ModuleElement .ItemListComponent table thead.SortOperation tr th {
+	padding: 0px;
+	text-align: left;
+	vertical-align: middle;
+	background: #eeeeee;
+	border-right: 1px solid #ffffff;
+	text-indent: 6px;
+}
+
+
+.ItemListComponent table thead.SortOperation tr th a {
+	display: block;
+	padding: 5px 20px 5px 3px;
+	height: 1.1em;
+	line-height: 1.1em;
+	background: #eeeeee;
+	color: #000000;
+	border: none;
+	background-position: right;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+}
+.ItemListComponent table thead.SortOperation tr th a:link,
+.ItemListComponent table thead.SortOperation tr a:visited {
+	text-decoration: none;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.ItemListComponent table thead.SortOperation tr th a:hover {
+	text-decoration: none;
+	background: #f8f4c9;
+	color: #000000;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.ItemListComponent table thead.SortOperation tr th a:active {
+	text-decoration: none;
+	background: #efe695;
+	color: #000000;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.ItemListComponent table thead.SortOperation tr th.Sort_up a {
+	background-image: url("/userauth/DMSImage/media/list_sort_up.gif");
+}
+
+.ItemListComponent table thead.SortOperation tr th.Sort_down a {
+	background-image: url("/userauth/DMSImage/media/list_sort_down.gif");
+}
+.ItemOperation a,
+.ItemOperation button {font-size: 90%;}
+
+/*---.ContentModuleEditable--*/
+.ContentModuleEditable {
+margin: 6px 0 12px 0;
+background: #eeeeee;
+zoom: 1;
+clear: both;
+}
+.ContentModuleEditable h5{margin: 0 1em;}
+.ContentModuleEditable table {width: 100%;padding: 5px 1em;}
+.ContentModuleEditable table th h5{margin: 0 6px 0 0;}
+.ContentModuleEditable .ModuleElement table {
+margin-top: 3px;
+border: none;
+}
+.ContentModuleEditable .ModuleElement table th ,
+.ContentModuleEditable .ModuleElement table td {border-width:0;}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent {}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent thead {display:none;}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent tbody {border:none;}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent tbody th {
+width: 35%;
+text-align: left;
+vertical-align: top;
+padding: 7px 4px 4px 2em;
+}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent tbody th label {
+color: #000;
+}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent tbody td {
+color: #000;
+vertical-align: middle;
+padding: 4px 10px 6px 6px;
+}
+.ContentModuleEditable .ModuleElement table.PropertyListComponent tbody td select {
+margin: 0;
+}
+
+/*-- ContentModule .OrderListComponent --*/
+.ContentModuleEditable .ModuleElement .OrderListComponent table {
+margin: 5px 0 0 0;
+border: 1px solid #D1D1D1;
+}
+.ContentModuleEditable .ModuleElement .OrderListComponent table thead th {
+padding: 2px 4px;
+text-align: left;
+white-space: nowrap;
+background: #DEDEDE;
+border: 1px solid #D1D1D1;
+}
+.ContentModuleEditable .ModuleElement .OrderListComponent table tbody th ,
+.ContentModuleEditable .ModuleElement .OrderListComponent table tbody td {
+text-align: left;
+color: #000;
+padding: 2px 4px;
+background-color: #FFF;
+border-bottom: 1px solid #D1D1D1;
+border-width: 0 0 1px 0;
+vertical-align: middle;
+}
+.ContentModuleEditable .ContentOperation {margin:4px 6px 0 0;}
+
+/* sub items */
+tr.Sub th {padding-left: 4em !important;}
+tr.Sub1 th {padding-left: 4em !important;}
+tr.Sub2 th {padding-left: 5em !important;}
+tr.Sub3 th {padding-left: 6em !important;}
+tr.Sub4 th {padding-left: 7em !important;}
+tr.Sub5 th {padding-left: 8em !important;}
+tr.Sub6 th {padding-left: 9em !important;}
+tr.Sub7 th {padding-left: 10em !important;}
+span.subsub ,
+span.Subsub {
+display: block;
+padding: 0 0 1ex 8ex;
+}
+span.memo {
+display: block;
+margin-top: 3px;
+font-size: 90%;
+color: #4F5666;
+line-height: 150%;
+}
+.GroupTitle span.memo {
+display: inline;
+font-size: 90%;
+color: #4F5666; 
+margin-left: 20px;
+}
+.H4memo {
+font-size: 90%;
+color: #232323;
+line-height: 150%;
+padding: 3px 6px;
+border-top: none;
+}
+/*-- EditableItems dl dt dd sub style --*/
+.EditableItems {zoom: 1;}
+.EditableItems:after {content: "";display: block;clear: both;}/* clearfix */
+.EditableItems dl {padding: 4px 0;}
+.EditableItems dl dt {
+display: inline;
+padding: 4px 4px 4px 1ex;
+}
+.EditableItems dl dd {
+display: inline;
+padding: 4px 4px 4px 1em;
+}
+.EditableItems dl.Main,
+.EditableItems dl.Sub1 {border-bottom: solid 1px #FFF;}
+.EditableItems dl.Sub1 dt {padding: 4px 4px 4px 3ex;}
+.EditableItems dl.Sub2 dt {padding: 4px 4px 4px 5ex;}
+.EditableItems dl.Sub3 dt {padding: 4px 4px 4px 7ex;}
+.EditableItems dl.Sub4 dt {padding: 4px 4px 4px 9ex;}
+.EditableItems dl.Sub5 dt {padding: 4px 4px 4px 11ex;}
+.EditableItems dl.Sub6 dt {padding: 4px 4px 4px 13ex;}
+.EditableItems dl.Sub7 dt {padding: 4px 4px 4px 15ex;}
+.PropertyDefinitionSub {
+border-bottom: solid 1px #FFF;
+padding: 4px 4px 4px 3ex;
+}
+.NoBorderBottom {border: 0;}
+
+/*-- ContentModuleListUp --*/
+.ContentModuleListUp {margin: 6px;}
+.ContentModuleListUp .ListUpModuleElement td {vertical-align: top;}
+.ListUpModuleElement ul {
+list-style: none;
+margin: 6px;
+line-height: 1.5em;
+}
+.ListUpModuleElement ul li {margin: 6px;}
+.ListUpModuleElement ul li a:link ,
+.ListUpModuleElement ul li a:visited {
+color: #046;
+text-decoration: none;
+border-bottom: 1px dotted #046;
+}
+.ListUpModuleElement ul li a:hover {
+color: #04C;
+text-decoration: none;
+border-bottom: 1px solid #04C;
+}
+.ListUpModuleElement ul li a:active ,
+.ListUpModuleElement ul li a:focus {
+color: #049;
+text-decoration: none;
+border-bottom: 1px solid #049;
+}
+
+/*---.ElementOperation--*/
+.ElementOperation {padding: 6px 0 2px 0;zoom: 1;}
+.ElementOperation:after {content: "";display: block;clear: both;}/* clearfix */
+.ElementOperation fieldset {display: inline;margin-right: 12px;}
+.ElementOperation fieldset.FilterOperation {
+clear: both;
+display: block;
+width: auto;
+margin: 0;
+padding: 2px 2px 0 4px;
+text-align: right;
+zoom: 1;
+}
+.ElementOperation fieldset.FilterOperation span.DisplayedOption {
+float: left;
+margin: 8px 5px;
+}
+.ElementOperation fieldset.GotoSubSettings {
+display: block;
+margin: 2px;
+text-align: right;
+}
+.ElementOperation input {margin: 1px 0 4px 0;}
+
+/*****= Paging Navigation  =*****/
+.PageOperation {
+display: block;
+float: right;
+text-align: right;
+vertical-align: bottom;
+margin: 0;
+zoom: 1;
+}
+.PagingNavigation {
+float: right;
+padding: 2px 0;
+text-align: right;
+vertical-align: top;
+white-space: nowrap;
+color: #666;
+zoom: 1;
+}
+* > .PagingNavigation {width: auto;}
+.PagingNavigation span.OneGroup {
+margin: 0 0 0 12px;
+white-space: nowrap;
+zoom: 1;
+}
+.PagingNavigation span.OneGroup a {padding: 0 1px;zoom: 1;}
+.PagingNavigation span.OneGroup a:link,
+.PagingNavigation span.OneGroup a:visited {
+text-decoration: underline;
+border: none;
+}
+.PagingNavigation span.OneGroup a:hover ,
+.PagingNavigation span.OneGroup a:active {
+text-decoration: underline;
+border: none;
+background-color: #F9F9FF;
+}
+.PagingNavigation span.OneGroup span.Now {
+padding: 0 2px;
+border: 1px solid #ECEBE4;
+color: #584B46;
+font-weight: bold;
+zoom: 1;
+}
+
+/*---.ElementOperation_Footer--*/
+.ElementOperation_Footer {
+padding-top: 2px;
+border-top: 1px solid #D6D6D6;
+zoom: 1;
+}
+.ElementOperation_Footer:after {content: "";display: block;clear: both;}/* clearfix */
+.ElementOperation_Footer fieldset {display: inline;margin: 0 12px 0 0;}
+
+/*--.GotoListTop--*/
+.GotoListTop {
+float: left;
+margin: 0;
+padding: 0;
+}
+/*--.GotoTop--*/
+.GotoTop {
+margin: 1ex 0;
+padding: 2px 0;
+border-top: 1px solid #D6D6D6;
+}
+/*=================== Attention[NG] ===================*/
+.Attention {
+color: #F00;
+padding: 1px 4px;
+background-color: #FEB;
+}
+/*=================== Num[align right] ===================*/
+.NumDataColumn {text-align: right !important;}
+
+/*===================DocumentFileNum [align right] ===================*/
+.DocumentFileNum{
+float: right !important;
+padding-bottom:2px;
+margin-top: -20px; 
+}
+/*=================== Note ===================*/
+.Note {
+color: #676787;
+font-size: 90%;
+vertical-align: middle;
+line-height: 1.5em;
+padding-right: 1ex;
+padding-left: 1ex;
+}
+/*=================== Many_items_column ===================*/
+td.One_item {
+display: block;
+width: auto;
+padding: 2px 0;
+}
+td.One_item > input {margin-right: 2px;}
+td.Many_items_column .One_item {
+display: inline;
+padding-right: 20px;
+white-space: nowrap;
+width: auto;
+}
+td.Many_items_column_matrix .One_item {
+display: block;
+float: left;
+padding-right: 20px;
+white-space: nowrap;
+width: 32ex;
+}
+
+/*=================== Step ===================*/
+#contentHeading .Steps {padding: 2px 0;}
+#contentHeading .Steps p {
+color: #DDDDDA;
+font-weight: bold;
+font-size: 90%;
+display: inline;
+margin: 0 5px 0 4px;
+}
+#contentHeading .Steps img {margin: 0 5px 0 0;}
+#contentHeading .Steps h2 {margin: 1px 0 0 2px;}
+
+/*=================== Time ===================*/
+.TimeSetting {white-space: nowrap;}
+
+/*=================== Sizes ===================*/
+.Size_full_box{width: 99%;height: 5em !important;}
+.Size_full{width: 99%;}
+.Size_longest{width: 600px;}
+.Size_long{width: 480px;}
+.Size_middle{width: 340px;}
+.Size_short{width: 250px;}
+.Size_shortest{width: 160px;}
+.Size_figure{width: 6ex;}
+.SelList {height:90px;}
+
+/*-- MsgModule --*/
+.MsgModule {
+margin: 4ex 10%;
+padding: 2px;
+border: 1px solid #000;
+}
+.MsgModule .Normal {
+padding: 16px;
+background: #CDECEC;
+border: 1px solid #7B7B7B;
+text-align: center;
+}
+.MsgModule .Warning {
+padding: 16px;
+background: #FFFFD7;
+border: 1px solid #7B7B37;
+text-align: center;
+}
+.MsgModule .Glitch {
+padding: 16px;
+background: #FFB;
+border: 1px solid #7B7B37;
+text-align: center;
+}
+.MsgModule .Critical {
+padding: 16px;
+background: #FEE;
+border: 1px solid #7B7B37;
+text-align: center;
+}
+.MsgModule div input {
+margin-top: 1ex;
+padding: 1px 1.5em;
+}
+.MsgModule img {margin: 0 0 10px 0;}
+.AlertStatusMsg {font-weight: bold;}
+
+/*--Message with guide--*/
+.Normal .Message_guide {
+margin: 20px 0 0 0;
+padding: 15px 40px;
+vertical-align: middle;
+text-align: left;
+border-top: 1px dotted #39C;
+border-bottom: 1px dotted #39C;
+}
+.Warning .Message_guide {
+margin: 20px 0 0 0;
+padding: 15px 40px;
+vertical-align: middle;
+text-align: left;
+border-top: 1px dotted #EDE60A;
+border-bottom: 1px dotted #EDE60A;
+}
+.Glitch .Message_guide {
+margin: 20px 0 0 0;
+padding: 15px 40px;
+vertical-align: middle;
+text-align: left;
+border-top: 1px dotted #E88E00;
+border-bottom: 1px dotted #E88E00;
+}
+.Critical .Message_guide {
+margin: 20px 0 0 0;
+padding: 15px 40px;
+vertical-align: middle;
+text-align: left;
+border-top: 1px dotted #E93003;
+border-bottom: 1px dotted #E93003;
+}
+
+/*-- Validation Error style --*/
+.MessageFrame_vali {margin: 10px 25px;}
+.MessageFrame_vali ul {
+background-color: #F8F0F0;
+border: 4px double #ED3131;
+color: #ED3131;
+padding: 5px 30px;
+}
+.MessageFrame_vali ul li {padding: 4px 0;}
+.Vali_part {
+font-size: 75%;
+font-style: italic;
+color: #FFF;
+background-color: #ED3131;
+padding: 1px 4px 1px 2px;
+margin: 0 6px 0 3px;
+white-space: nowrap;
+}
+#rebootModule{
+margin:4px 0;
+text-align: center;
+}
+#rebootModule input {
+margin:4px;
+width: 230px;
+}
+#rebootModule input.ButtonEnable,
+#rebootModule input.ButtonDisable {overflow:visible;}
+
+/*============== #deviceErrorInfoModule=================*/
+#deviceErrorInfoModule p {
+margin-left: 12px;
+padding: 2px;
+border-bottom: 1px solid #FFF;
+}
+/*============== .QuotationModuleHeading=================*/
+.QuotationModuleHeading h3 {display: none;}
+.QuotationModuleElement .ModuleElement table {
+width: auto;
+margin-left: 7px;	
+}
+/*============== etc=================*/
+#DeviceStatusModule.PropertyListComponent th {width: 20%;}
+label {padding-left: 2px;}
+
+/*--------------------------------------------------*/
+#AssembleSecurity.ModuleElement .ItemListComponent table tbody th ,
+#AssembleSecurity.ModuleElement .ItemListComponent table tbody td {
+border-bottom: none ;
+}
+#AssembleSecurity.ModuleElement .ItemListComponent table {
+border-bottom: 1px solid #DDD !important;
+}
+#AssembleSecurity.ModuleElement .ItemListComponent table tbody tr.SingleRow th ,
+#AssembleSecurity.ModuleElement .ItemListComponent table tbody tr.SingleRow td {
+border-top: 1px solid #DDD !important;
+border-bottom: 1px solid #DDD !important;
+}
+#AssembleSecurity.ModuleElement .ItemListComponent table tbody {
+border-top: none;
+}
+#AssembleSecurity .EditColumn {width: 2em;}
+/*--------------------------------------------------*/
+

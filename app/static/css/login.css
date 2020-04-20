@@ -1,0 +1,134 @@
+/**********************************************/
+/*  RUI login style                           */
+/*  2015/1/21                               */
+/**********************************************/
+.LoginModule {
+zoom: 1;
+}
+
+#container {
+margin: 0 auto;
+width: 100%;
+min-width: 640px;
+text-align: left;
+}
+
+/*---.LoginModule--*/
+.LoginModule {
+padding: 15px 0px;
+zoom: 1;
+}
+
+.loginContents {
+text-align: center;
+}
+.LoginModule table {
+margin: 0 auto;
+border: none;
+}
+.LoginModule table.PropertyListComponent thead {
+display: none;
+}
+
+.LoginModule table.PropertyListComponent tbody th label{
+font-weight: bold;
+}
+.LoginModule table.PropertyListComponent tbody td {
+color: #000000;
+vertical-align: middle;
+padding: 4px;
+}
+.LoginModule table.PropertyListComponent tbody td select ,
+.LoginModule table.PropertyListComponent tbody td input {
+margin: 0px;
+}
+#userName {
+margin: 0
+}
+.Sub th {
+text-indent: 0.8em;
+}
+
+/*-- #loginHeader --*/
+#loginHeader {
+background: #0f0f0f;
+margin-bottom: 0;
+}
+#corporateBranding {
+float: left;
+height: 32px;
+width: 120px;
+}
+#windowTitle h1 {
+font-size: 14pt;
+font-weight: bold;
+padding: 8px;
+line-height: 24px;
+color: #ffffff;
+}
+#deviceType {
+padding: 4px 15px 4px 10px;
+background: #232323;
+}
+#deviceName {
+background: #232323;
+color: #dfdfdf;
+font-weight: bold;
+}
+.SwitchMode {
+text-align: right;
+margin: 6px 6px 12px 6px;
+}
+.SwitchMode label ,
+.SwitchMode a{
+font-size: 11pt;
+}
+
+.SwitchMode a:link,
+.SwitchMode a:visited {
+color: #1d2f72;
+text-decoration: none;
+border-bottom: 1px dotted #1d2f72;
+}
+.SwitchMode a:active {
+color: #10205a;
+text-decoration: none;
+border-bottom: 1px dotted #10205a;
+}
+.LoginMessage {
+text-align: center;
+line-height: 1.2em;
+margin: 8px 20px;
+}
+.LoginOperation {
+text-align: center;
+}
+
+.LoginOperation fieldset button{
+margin: 10px 5px 20px 5px;
+width: 150px;
+padding: 5px;
+}
+
+.ButtonEnable:hover {
+background: #F8F4C9;
+}
+input.ButtonEnable:active {
+background: #EFE695;
+}
+
+input.Size_shortest {
+padding: 3px;
+width: 300px;
+}
+#applicationInfo {
+border-top: none;
+}
+label.MarginRight {
+margin-right:15px;
+}
+label.MarginLeft {
+margin-left:15px;
+}
+
+

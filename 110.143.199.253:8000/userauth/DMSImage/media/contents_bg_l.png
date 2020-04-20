@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type"        content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type"  content="text/css" />
+<meta http-equiv="Pragma"              content="no-cache"/>
+<meta http-equiv="Cache-Control"       content="no-cache"/>
+<meta http-equiv="Expires"       content="0"/>
+<meta name="format-detection"          content="telephone=no"/>
+
+<meta name="generator" content="Adobe GoLive 6">
+
+<link rel="shortcut icon" href="/login/images/RLS/favicon.ico" />
+
+<title>User Authentication : iR-ADV C7570 : iR-ADV C7570</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="/login/css/login.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/login/css/common.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/login/css/LanguageDependent/en.css" />
+
+<SCRIPT type="text/JavaScript" SRC="/login/SDLscripts/digest.js"></SCRIPT>
+<SCRIPT type="text/JavaScript" SRC="/login/SDLscripts/jquery.min.js"></SCRIPT>
+<SCRIPT type="text/JavaScript" SRC="/login/SDLscripts/jsencrypt.js"></SCRIPT>
+<SCRIPT type="text/JavaScript">
+<!---
+var initpass=null;
+function clear_filled() {
+	document.login.USERNAME.value="";		
+	document.login.PASSWORD.value="";
+	document.login.PASSWORD_T.value="";
+	dataUserName="";
+	dataPassword="";
+	document.login.domainname.selectedIndex = 0;
+}
+
+function guestLogin(){
+	
+	document.login.GUEST.value = "on";
+	document.login.DOMAIN.value = "";
+	document.login.submit();
+	
+}
+
+function login() {
+	try{
+		document.login.DOMAIN.value = document.login.domainname.options[document.login.domainname.selectedIndex].value;
+	} catch (e) {
+		alert("Login failed.\nCheck the user name and password.");
+		clear_filled();
+		return;
+	}
+	document.login.GUEST.value = "";
+	if("https:" == document.location.protocol){
+		$('#PASSWORD').val($('#PASSWORD_T').val());
+		document.login.submit();
+		return ;
+	}
+    var input = $('#PASSWORD_T').val()+$('#CHALLENGE').val();
+    var pubkey = $('#PK').val();
+    var crypted = doEncrypt(input,pubkey);
+    $('#PASSWORD').val(crypted);
+    $('#PASSWORD_T').val("");
+	document.login.submit();
+}
+function getKeycode(e){
+	if(document.all){
+		return  event.keyCode;
+	}
+	else if(document.getElementById){
+		return (e.keyCode!=0)?e.keyCode:e.charCode;
+	}
+	else if(document.layers){
+		return  e.which;
+	}
+}
+
+if(document.layers){
+	document.captureEvents(Event.KEYDOWN);
+	document.onkeydown = key_Press
+}else{
+	document.onkeydown = key_Press
+}
+function key_Press(e){
+	chr0 = getKeycode(e);
+	if(chr0 == 13)
+	{
+		login();
+		return false;
+	}
+	return true;
+}
+
+function isGuestOn(){
+	
+	var MODE = "OFF";
+	if(MODE == "ON")
+	{
+		return 1;
+	}
+	return 0;
+	
+}
+
+//--->
+</SCRIPT>
+
+</head>
+
+<body LINK="#222222" VLINK="#555555" ALINK="#66ffcc" MARGINHEIGHT="8" TOPMARGIN="8" align="center" >
+<div id="container">
+	<div id="loginWindow">
+		<form name="login" action="/login" method="post" autocomplete="off">
+		<input type = "hidden" name = "CHALLENGE" id = "CHALLENGE" value = " ">
+		<input type = "hidden" name = "URI" value = "/userauth/DMSImage/media/contents_bg_l.png">
+ 		<input type = "hidden" name = "policy">
+ 		<input type = "hidden" name = "DOMAIN" value=""/>
+ 		<input type = "hidden" name = "admin" value=""/>
+		<input type = "hidden" name = "GUEST" value=""/>
+		<input type = "hidden" name = "PK" id = "PK" value="-----BEGIN PUBLIC KEY-----
+MIIBIDALBgkqhkiG9w0BAQEDggEPADCCAQoCggEBAK0wgRR4jVD4AtluVIS44dJ2px4vms+DnlYm
+1rvHS4QYvAUanCVvcESOvvdoBsi35KmYMW1tUaRQhjhQrzT1gHagIjYeiAKUn2q62xQ/Emqz4mCp
+fcgWUiNXNic+2e4VWWRk3C9XJJdU+F+SRhJ2ZLRQ3XJbt9an28PTZHQ/lvC1gMGL6ptWAc8z2G4G
+yiu4J6VZc0uwdseDuex6K5zSv5DoWopUVQ0gXMYoLVOlwWX3BEzTCl09MLMYWeXJzcBx2xwtQ1Si
+CxwnmWJbH/7T8heYZJ8iJVLgJXmVoOsTxnJnzkfLPFEi4LwerS0qIe5i4qh4OLCH+u0epCYRHn7Y
+PzcCAwEAAQ==
+-----END PUBLIC KEY-----"/>
+		<input type = "hidden" name = "PASSWORD" id = "PASSWORD">
+		<div id="loginHeader">
+			<div id="corporateBranding">
+				<img src="/login/images/RLS/canonlogo.gif" alt="CANON" title="" />
+			</div><!-- corporateBranding -->
+			<div id="windowTitle">
+				<h1>Login</h1>
+				<p id="deviceType">
+					<span id="deviceName">iR-ADV C7570 / iR-ADV C7570 / </span>
+				</p>
+			</div><!-- windowTitle -->	
+		</div><!-- loginHeader -->
+		<div id="login_contentsArea">
+			<div id="loginContentsWrapper">
+				<div id="loginContents" >
+					<div class="LoginModule">
+						<table class="PropertyListComponent" >
+							<colgroup>
+		 						<col class="ItemNameColumn" />
+			 					<col class="ItemValueColumn" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>User Name:</th>
+									<td><input type="text" name="USERNAME" id="USERNAME" class="Size_shortest" /></td>
+								</tr>
+								<tr>
+									<th>Password:</th>
+									<td><input type="password" name="PASSWORD_T" id="PASSWORD_T" class="Size_shortest" /></td>
+								</tr>
+								<tr>
+									<th>Login Destination:</th>
+									<td>
+										<select size="1" name="domainname">
+											<option value ="localhost">This device</option>  
+										</select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- LoginModule -->
+					<div class="LoginMessage">
+							<script language="JavaScript">
+							<!--
+								if(isGuestOn() == "1"){
+									document.write("<span>A guest user can log in without entering the User Name and Password.</span>");
+								}else{
+									document.write("<span>Enter a user name, password, and specify a Login Destination and click [Log In].</span>");
+								}
+							//-->
+							</script>
+					</div><!-- LoginMessage -->
+					<div class="LoginOperation">
+						<fieldset>
+							<script language="JavaScript">
+							<!--
+								if(isGuestOn() == "1"){
+									document.write("<button class=\"ButtonEnable\" name=\"GuestLoginButton\" onclick=\"window.guestLogin();return false;\">Log In (Guest)</button>");
+								}
+								document.write("<button class=\"ButtonEnable\" name=\"LoginButton\" onclick=\"window.login();return false;\">Log In</button>");
+							//-->
+							</script>
+						</fieldset>
+					</div><!-- LoginOperation -->
+				</div><!-- loginContents -->
+			</div><!--loginContentsWrapper-->
+		</div><!-- login_contentsArea -->
+		</form>
+		
+		<div id="applicationInfo">
+			<address class="SiteInforLegal">Copyright CANON INC. 2016 </address>
+		</div><!-- applicationInfo -->
+		<form name="removeChallenge" method="post">
+			<input type="HIDDEN" name="invalidCH" value="">
+		</form>
+	</div><!-- loginWindow -->
+</div><!-- container -->
+</body>
+</html>

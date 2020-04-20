@@ -1,0 +1,16 @@
+﻿@charset "UTF-8";
+
+/**********************************************/
+/***  << Language Dependent style set >>    ***/
+/***  for ENGLISH                           ***/
+/***  ver. 2012/11/29                       ***/
+/**********************************************/
+
+
+*{
+	font-family: "Segoe UI","Tahoma","Verdana",sans-serif;
+}
+#copyright{
+	font-family: "Arial","Helvetica";
+}
+
